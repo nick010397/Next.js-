@@ -1,5 +1,5 @@
-import { Button, Header } from "semantic-ui-react";
-import styles from "./Item.module.css";
+import { Button, Header } from 'semantic-ui-react'
+import styles from './Item.module.css'
 
 export default function Item({ item }) {
   const {
@@ -11,8 +11,8 @@ export default function Item({ item }) {
     category,
     product_type,
     product_link,
-  } = item;
-  console.log(item);
+  } = item
+  console.log(item)
   return (
     <>
       <div className={styles.wrap}>
@@ -23,7 +23,7 @@ export default function Item({ item }) {
           <strong className={styles.tit_item}>{name}</strong>
           <strong className={styles.num_price}>${price}</strong>
           <span className={styles.txt_info}>
-            {category ? `${category}/` : ""}
+            {category ? `${category}/` : ''}
             {product_type}
           </span>
           <Button color="orange">구매하기</Button>
@@ -32,5 +32,5 @@ export default function Item({ item }) {
       <Header as="h3">Description</Header>
       <p style={{ paddingBottom: 20, fontSize: 18 }}>{description}</p>
     </>
-  );
+  )
 }
